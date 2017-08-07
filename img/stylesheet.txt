@@ -1,0 +1,95 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-Exitcopy {
+    width: 21px;
+    height: 19px;
+    background-position: -3px -3px;
+}
+
+.sprite-Fb {
+    width: 32px;
+    height: 32px;
+    background-position: -30px -3px;
+}
+
+.sprite-Inst {
+    width: 32px;
+    height: 32px;
+    background-position: -68px -3px;
+}
+
+.sprite-Vk {
+    width: 32px;
+    height: 32px;
+    background-position: -106px -3px;
+}
+
+.sprite-basket {
+    width: 21px;
+    height: 20px;
+    background-position: -3px -41px;
+}
+
+.sprite-basketcopy {
+    width: 21px;
+    height: 20px;
+    background-position: -30px -41px;
+}
+
+.sprite-exit {
+    width: 21px;
+    height: 19px;
+    background-position: -57px -41px;
+}
+
+.sprite-glass {
+    width: 17px;
+    height: 17px;
+    background-position: -84px -41px;
+}
+
+.sprite-heart {
+    width: 15px;
+    height: 13px;
+    background-position: -144px -3px;
+}
+
+.sprite-html {
+    width: 108px;
+    height: 38px;
+    background-position: -3px -67px;
+}
+
+.sprite-ice {
+    width: 49px;
+    height: 49px;
+    background-position: -3px -111px;
+}
+
+.sprite-list {
+    width: 49px;
+    height: 49px;
+    background-position: -58px -111px;
+}
+
+.sprite-my {
+    width: 48px;
+    height: 49px;
+    background-position: -165px -3px;
+}
+
+.sprite-temp {
+    width: 48px;
+    height: 49px;
+    background-position: -117px -58px;
+}
+
+.sprite-tw {
+    width: 33px;
+    height: 32px;
+    background-position: -171px -58px;
+}
