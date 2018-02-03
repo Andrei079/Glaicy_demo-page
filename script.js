@@ -25,21 +25,22 @@ popup2.classList.toggle("form-show");  });
     var text = document.querySelector(".promotion__text"); 
 // ljk;ty bflhtc cskrbvtyznmcz
     slide[1].addEventListener("click", function () {    
-        img.style.backgroundColor = "#8a97a7"; 
+      
         img.style.backgroundImage = "url('img/ice_cream_3.jpg')";
+        img.style.backgroundColor = "#8a97a7"; 
         text.innerHTML= 'Шоколадный пломбир и лимонный сорбет '; 
        
     }); 
 
-    slide[2].addEventListener("click", function () {
+    slide[2].addEventListener("click", function () {       
+        img.style.backgroundImage = "url('img/ice_cream_2.jpg')";
         img.style.backgroundColor = "#9d8b84";
-            img.style.backgroundImage = "url('img/ice_cream_2.jpg')";
         text.innerHTML = 'Пломбир с помадкой и клубничный щербет';  
     }); 
 
-    slide[0].addEventListener("click", function () {
-        img.style.backgroundColor = "#849d8f ";
+    slide[0].addEventListener("click", function () {       
         img.style.backgroundImage = "url('img/ice_cream_1.jpg')";
+        img.style.backgroundColor = "#849d8f ";
         text.innerHTML = 'Крем-брюле и пломбир с малиновым джемом';
     }); 
 window.onload = function () {  
