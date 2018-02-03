@@ -2,8 +2,8 @@ body {
     /*gogle fonts in HTML*/
     font-family: "Roboto", Arial, sans-serif;
     color: #ffffff;
-    background: #849d8f  url("img/ice_cream_2.jpg") no-repeat center top;
-    background: url("img/ice_cream_1.jpg") no-repeat center top;
+    background: #849d8f  url("img/ice_cream_1.jpg") no-repeat center top;  
+
 }
  /* для хрома уббираем рамки у кнопок по умолчанию */
 button,
