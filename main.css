@@ -2,7 +2,8 @@ body {
     /*gogle fonts in HTML*/
     font-family: "Roboto", Arial, sans-serif;
     color: #ffffff;
-    background: #849d8f url("img/ice_cream_1.jpg") no-repeat center top;
+    background: #849d8f  url("img/ice_cream_2.jpg") no-repeat center top;
+    background: url("img/ice_cream_1.jpg") no-repeat center top;
 }
  /* для хрома уббираем рамки у кнопок по умолчанию */
 button,
@@ -531,7 +532,7 @@ ul {
 /*НАЧАЛО ХИТЫ и карточки товаров в каталоге*/
 
 .list-item {
-    margin-bottom: -20px;
+    margin-bottom: -27px;
 }
 
 .list-item li{
@@ -551,8 +552,8 @@ ul {
 
 .hit:after {
     position: absolute;
-    left:5px;
-    top:5px;
+    left:0px;
+    top:0px;
     content: "";
     width: 61px;
     height: 61px;
@@ -563,7 +564,8 @@ ul {
 
 .item .link {
     display: block;
-    padding-top: 14px;
+    width: 258px;
+    padding-top: 18px;
     font-family: "Roboto", Arial, sans-serif;
     color: #ffffff;
     font-size: 16px;
@@ -575,6 +577,7 @@ ul {
 .item .price {
     position: absolute;
     top: 225px;
+    left: -10px;
     font-family: "Roboto", Arial, sans-serif;
     color: #ffffff;
     font-size: 45px;
@@ -772,7 +775,7 @@ ul {
 
 .news-blog a {
     display: block;
-    margin-top: -10px;
+    margin-top: -9px;
     padding-left: 18px;
     color: #353535;
     font-size: 24px;
@@ -840,8 +843,8 @@ ul {
 
 .freedback .freedback-pin {
     position: absolute;
-    left: 270px;
-    top: 140px;
+    left: 265px;
+    top: 138px;
 }
 
 .freedback .freedback-pinsahdows {
@@ -893,6 +896,7 @@ ul {
     line-height: 20px;
     /* Приближение из-за подстановки шрифтов */
     text-align: left;
+   
 }
 
 .freedback-form .adress {
@@ -982,14 +986,19 @@ ul {
     background-position: -68px -3px;
 }
 
-/*стилизаци кнопок соцсетей*/
+/*поведение стилизаци кнопок соцсетей*/
 
 .social-btn:hover {
-    filter: opacity(100%);
-    border-width: 3px;
-    width: 27px;
-    height: 27px;
+    filter: opacity(0.5);   
+   
 }
+
+
+.social-btn:active {
+    filter: opacity(0.3);  
+    filter: contrast(10)   
+}
+
 
 
 /* О НАС  */
@@ -1363,9 +1372,16 @@ input:focus {
     float: left;
     width: 194px;
 }
+.select-form {
+    display: block;
+    width: 180px;
+    height: 37px;
+}
+
 
 .popular-sort select {
     background-color: rgba(248, 247, 244, 0.2);
+    position: relative;
     border-radius: 50px;
     width: 194px;
     height: 37px;
@@ -1376,12 +1392,38 @@ input:focus {
     font-weight: 500;
     padding-left: 10px;
     margin-top: 5px;
+    -webkit-appearance: none;
+
+
 }
 
-.popular-sort select:hover {
-    color: #000000;
-    background-color: #ffffff;
+.popular-sort:before {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 195px;
+    top: 220px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid white;
+
 }
+
+.select-form:hover .popular-sort:before{
+     border-top-color:black;
+
+
+ }
+
+/*.popular-sort select:hover {*/
+    /*color: #000000;*/
+    /*background-color: #ffffff;*/
+
+/*}*/
+
+
 
 .popular-sort option {
     font-family: "Roboto", Arial, sans-serif;
@@ -1424,24 +1466,52 @@ input:focus {
     padding-left: 10px;
     font-family: "Roboto", Arial, sans-serif;
     color: #ffffff;
-    font-size: 14px;
-    /* Приближение из-за подстановки шрифтов */
+    font-size: 14px;    
     font-weight: 500;
     text-align: left;
 }
 
 .price-sort-form .range-min {
-    width: 95px;
+    border-radius: 50%;
+    background-color:  #f8f7f4;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    width: 21px;
+    height: 22px;
     position: absolute;
-    left: 15px;
-    top: 10px;
+    left: 25px;
+    top: 8px;
+
 }
 
 .price-sort-form .range-max {
-    width: 95px;
+    border-radius: 50%;
+    background-color:  #f8f7f4;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    width: 21px;
+    height: 22px;
     position: absolute;
     left: 110px;
-    top: 10px;
+    top: 8px;
+}
+
+.price-sort-form .price-line {
+    position: absolute;
+    background-color:  rgba(248, 247, 244, 0.5);
+    width: 188px;
+    height: 4px;
+    top: 17px;
+    left: 15px;
+    z-index: 1;
+}
+
+.price-sort-form .price-line-light {
+    position: absolute;
+    background-color:  #f8f7f4;    
+    width: 100px;
+    height: 4px;
+    top: 17px;
+    left: 25px;
+    z-index: 5;
 }
 
 
@@ -1454,7 +1524,7 @@ input:focus {
 
 .fat-sort-form {
     background-color: rgba(248, 247, 244, 0.2);
-    width: 415px;
+    width: 425px;
     height: 37px;
     border-radius: 50px;
     margin-top: 5px;
@@ -1543,7 +1613,7 @@ input:focus {
 
 .additive-sort-form {
     background-color: rgba(248, 247, 244, 0.2);
-    width: 700px;
+    width: 710px;
     height: 37px;
     border-radius: 50px;
     margin-top: 5px;
@@ -1570,7 +1640,7 @@ input:focus {
     font-size: 16px;
     font-weight: 500;
     text-align: left;
-    padding-left: 38px;
+    padding-left: 28px;
     display: inline-block;
     margin-top: 10px;
 }
@@ -1647,7 +1717,14 @@ input:focus {
     color: #363636;
 }
 
+/* Карточки товаров */
 
+.catalog-page .list-item {
+    margin-bottom: 50px;}
+.catalog-page .list-item .item{
+    margin-bottom: -10px;
+} 
+    
 
 
 
@@ -1657,6 +1734,7 @@ input:focus {
 .page-number {
     float: right;
     margin-bottom: 40px;
+    margin-right: 27px;
 }
 
 .page-number li {
@@ -1664,6 +1742,7 @@ input:focus {
     font-family: "Roboto", Arial, sans-serif;
     padding: 5px 10px;
     border-radius: 50px;
+    vertical-align: center;
 }
 
 .page-number a {
@@ -1674,7 +1753,7 @@ input:focus {
     font-weight: 500;
     text-align: center;
 }
-
+/* активная страница */
 .active-number {
     border-radius: 50px;
     background-color: #ffffff;
@@ -1684,10 +1763,22 @@ input:focus {
 .active-number a {
     color: #353535;
 }
-
-.page-number li:hover {
+/* выбор страницы */
+.page-number .page-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
+} 
+/* нет ссылки первая/последняя страница  */
+.no-link {
+    opacity: 0.5;
+    cursor: default;
 }
+.no-link:hover {
+    background-color:transparent;
+    
+    
+}
+/* КОНЕЦ номера страниц */
+
 
 .catalog-page .main-footer {
     border-top: 1px solid #a9bbb1;
@@ -1699,7 +1790,7 @@ input:focus {
 
 
 
-/* НАЧАЛО  форма полная корзина */
+/* НАЧАЛО  форма ПОЛНАЯ корзина */
 
 .basket-form {
     visibility: hidden;
@@ -1836,13 +1927,8 @@ input:focus {
     font-weight: 700;
     line-height: 24px;
 }
-/* 
-.catalog-page .btn {
-    background-color: #ec573b;
-    color: #ffffff;
-    text-decoration: none;
-   
-} */
+ 
+
 
  .catalog-page .btn:hover {
     background-color: #ffffff;
@@ -1860,7 +1946,7 @@ input:focus {
     
 } 
 
-
+/* для js  повление формы */
 .form-show {
     visibility: visible;
 }

@@ -11,8 +11,8 @@
 
 <div class="main-container">
 
-
-
+   
+  
 
     <!-- Шапка-->
     <header class="main-header clearfix">
@@ -97,37 +97,32 @@
          <div class="item-tools clearfix">
              <form action="#">
                 <div class="popular-sort">
-                     <label for="sort">Сортировка </label><br>
-                     <select name="tools-sort" id="sort">
-                         <option value="популярность" id="sort_hit"> по популярности</option>
-                         <option value="недорогие" id="sort_min">сначала недорогие</option>
-                         <option value="дорогие" id="sort_max">сначала дорогие</option>
-                         <option value="жирность" id="sort_fat">по жирности</option>
-                     </select>
+                    <label for="sort">Сортировка </label><br>
+                    <!--<span class="select-form"></span>    -->
+                         <select class="select-form" name="tools-sort" id="sort">
+                             <option value="популярность" id="sort_hit"> по популярности</option>
+                             <option value="недорогие" id="sort_min">сначала недорогие</option>
+                             <option value="дорогие" id="sort_max">сначала дорогие</option>
+                             <option value="жирность" id="sort_fat">по жирности</option>
+                         </select>
+
+
                 </div>
 
                  <div class="price-sort">
-                    <span> Цена: 100 руб. – 500 руб.</span> <br>
+                     <span> Цена: 100 руб. – 500 руб.</span> <br>
                      <div class="price-sort-form">
-                           <input class="range-min"   type="range" min="0"  max="1000" value="10" >
-                           <input class="range-max"   type="range" min="0"  max="1000"  value="200" >
-
-                             <!--  <input class="range-max" type="range" min="10" max="1000" value="100" > -->
-                            <!--   <div class="price-min">
-
-                              </div>
-                               <div class="circle-center">
-
-                               </div>
-
-                              <div class="price-right"> -->
+                           <div class="range-min" > </div>
+                           <div class="range-max" ></div>
+                           <div class="price-line"></div>
+                            <div class="price-line-light"></div>
 
                       </div>
 
 
 
 
-                     </div>
+                </div>
 
 
                  <div class="fat-sort">
@@ -173,7 +168,7 @@
 
 
         <div class="list-item clearfix">
-            <ul class="clearfix">
+            <ul class="list-item-row clearfix">
                     <li class="item">
                         
                         <img src="img/item11.png" alt="мороженое" width="267" height="267">
@@ -212,7 +207,7 @@
                          <a class="btn btn-item btn-item-hiden"  href="#">Быстрый просмотр</a>
                     </li>
             </ul>
-            <ul class="clearfix" >
+            <ul class="list-item-row  clearfix" >
                     <li class="item">
                       
                         <img src="img/item21.png" alt="мороженое" width="267" height="267">
@@ -253,7 +248,7 @@
                     </li>
             </ul>
 
-            <ul class="clearfix">
+            <ul class="list-item-row  clearfix">
                     <li class="item">
 
                         <img src="img/item31.png" alt="мороженое" width="267" height="267">
@@ -298,13 +293,20 @@
 
         <!--выбор страницы-->
         <ul class="page-number">
-            <li><a href="#"> &lt; </a></li>
+            <li class="no-link">
+                <a class="back-link" href="#"> 
+                    <img  src="img/back-link.png" alt="назад" width="9" height="14">               
+                </a> 
+            </li>
             <li class="active-number"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#"> &gt; </a></li>
+            <li class="page-link"><a href="#">2</a></li>
+            <li class="page-link"><a href="#">3</a></li>
+            <li class="page-link"><a href="#">4</a></li>
+            <li class="page-link"><a href="#">5</a></li>
+            <li class="page-link">
+                 <a class="next-link" href="#"> 
+                  <img src="img/next-link.png" alt="вперед" width="9" height="14">  
+            </a></li>
         </ul>
 
 
