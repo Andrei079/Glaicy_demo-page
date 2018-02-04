@@ -1,3 +1,14 @@
+//прелоадер 
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () { 
+        document.querySelector('.loaderArea').style.display="none";
+        document.querySelector('.circ').style.display = "none";
+    }, 1000);
+
+})
+
+
+
 //появление и закрытие скрытых окон
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -61,7 +72,39 @@ window.onload = function () {
 
 
 }
+//карта 
+    ymaps.ready(init);
+    var myMap,
+        myPlacemark;
 
+    function init() {
+        myMap = new ymaps.Map("map", {         
+            center: [59.938631, 30.323055],
+            zoom: 16
+        });
+        myMap.behaviors.disable('scrollZoom');
+       
+
+    myPlacemark = new ymaps.Placemark([59.938631, 30.323055
+        ],{
+           
+                hintContent: 'Адрес главного офиса и офлайн магазина: <br> ул. Большая Конюшенная 19/8, Санкт-Петербург',
+               
+            
+
+        },  {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/pin_main.png',
+                iconImageSize: [218, 142],
+                iconImageOffset: [0, -142],
+            iconContent: 'Адрес главного офиса и офлайн магазина',
+            balloonContent: '  ул. Большая Конюшенная 19/8, Санкт-Петербург'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+
+   
 
 
 })
